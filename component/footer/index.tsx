@@ -1,11 +1,10 @@
 import { Badge, Col, Row } from 'reactstrap';
 import { PropsWithChildren } from 'react';
-import { EmptyRowCol, HrefTargetBlank } from '../common';
-import { lastestUpdatedAt } from '../../package.json';
+import { DateTime } from 'luxon';
+import { EmptyRowCol } from '../common';
 import { IFooter } from './IFooter';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
-import { DateTime } from 'luxon';
 
 export const Footer = {
   Component,
@@ -13,7 +12,7 @@ export const Footer = {
 
 function Component({ payload }: PropsWithChildren<{ payload: IFooter.Payload }>) {
   const latestUpdated = DateTime.fromFormat(
-    lastestUpdatedAt,
+    payload.latestUpdated,
     Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
   );
   const latestUpdatedByNow = Math.floor(

@@ -1,9 +1,7 @@
-import { Row, Col, Alert } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Row, Col } from 'reactstrap';
 import { PropsWithChildren } from 'react';
 import ProfileContact from './contact';
 import ProfileImage from './image';
-import { EmptyRowCol } from '../common';
 import { IProfile } from './IProfile';
 import { Style } from '../common/Style';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
@@ -29,9 +27,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         </Col>
         <Col md={9} sm={12}>
           {createNameArea(name)}
-          <div style={{ marginTop: '25px'}}>
-            {createProfileContactMap(contact)}
-          </div>
+          <div style={{ marginTop: '25px' }}>{createProfileContactMap(contact)}</div>
         </Col>
       </Row>
     </div>
@@ -42,13 +38,9 @@ function createNameArea(name: Payload['name']) {
   return (
     <Row>
       <Col className="text-center text-md-left">
-        <h1 style={{ ...Style.blue, fontWeight: 'bold', display: 'inline' }}>
-          {name.title}
-        </h1>
+        <h1 style={{ ...Style.blue, fontWeight: 'bold', display: 'inline' }}>{name.title}</h1>
         <span style={{ marginLeft: '8px' }}>{name.role}</span>
-        <small style={{ color: 'rgba(0, 0, 0, 0.4)', marginLeft: '8px' }}>
-          {name.small || ''}
-        </small>
+        <small style={{ color: 'rgba(0, 0, 0, 0.4)', marginLeft: '8px' }}>{name.small || ''}</small>
       </Col>
     </Row>
   );

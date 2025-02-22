@@ -1,7 +1,5 @@
-import { Row, Col, Tooltip } from 'reactstrap';
-import { PropsWithChildren, useState } from 'react';
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Row, Col } from 'reactstrap';
+import { PropsWithChildren } from 'react';
 import { Style } from '../common/Style';
 import { ISkill } from './ISkill';
 import SkillRow from './row';
