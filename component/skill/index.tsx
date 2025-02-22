@@ -27,7 +27,6 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           <Col>
             <h2>
               <span style={Style.blue}>SKILL</span>
-              {createTooltip(payload.tooltip)}
             </h2>
           </Col>
         </Row>
@@ -36,30 +35,5 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         ))}
       </EmptyRowCol>
     </div>
-  );
-}
-
-function createTooltip(content?: string) {
-  if (!content) {
-    return '';
-  }
-
-  const [tooltipOpen, setTooltipOpen] = useState(false);
-  const toggle = () => setTooltipOpen(!tooltipOpen);
-
-  return (
-    <small>
-      {' '}
-      <FontAwesomeIcon icon={faQuestionCircle} id="skill-tooltip" />
-      <Tooltip
-        style={{ whiteSpace: 'pre-wrap' }}
-        placement="right"
-        target="skill-tooltip"
-        isOpen={tooltipOpen}
-        toggle={toggle}
-      >
-        {content}
-      </Tooltip>
-    </small>
   );
 }

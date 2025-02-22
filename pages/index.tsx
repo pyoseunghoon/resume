@@ -17,13 +17,13 @@ import { Style } from '../component/common/Style';
 import Payload from '../payload';
 import { Article } from '../component/article';
 
-function Yosume() {
+function Pyozzi() {
   return (
     <>
       <NextSeo {...Payload._global.seo} />
       <Head>
         <title>{Payload._global.headTitle}</title>
-        <link rel="shortcut icon" href={Payload._global.favicon} />
+        {/*<link rel="shortcut icon" href={Payload._global.favicon} />*/}
       </Head>
       <Container style={Style.global}>
         <Profile.Component payload={Payload.profile} />
@@ -31,9 +31,9 @@ function Yosume() {
         <Skill.Component payload={Payload.skill} />
         <Experience.Component payload={Payload.experience} />
         <Project.Component payload={Payload.project} />
-        <OpenSource.Component payload={Payload.openSource} />
-        <Presentation.Component payload={Payload.presentation} />
-        <Article.Component payload={Payload.article} />
+        {/*<OpenSource.Component payload={Payload.openSource} />*/}
+        {/*<Presentation.Component payload={Payload.presentation} />*/}
+        {/*<Article.Component payload={Payload.article} />*/}
         <Education.Component payload={Payload.education} />
         <Etc.Component payload={Payload.etc} />
         <Footer.Component payload={Payload.footer} />
@@ -42,4 +42,4 @@ function Yosume() {
   );
 }
 
-export default Yosume;
+export default Pyozzi;

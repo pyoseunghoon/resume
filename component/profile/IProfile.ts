@@ -18,13 +18,15 @@ export declare namespace IProfile {
     name: {
       /** ### 이름 */
       title: string;
+      /** ### 롤 */
+      role: string;
       /** ### 이름 옆 괄호로 작게 표시해주는 이름 */
       small?: string;
     };
     /** ### 연락 수단 목록 */
     contact: Contact[];
     /** ### 공지 */
-    notice: {
+    notice?: {
       /** ### 공지 내용 */
       title: string;
       /**

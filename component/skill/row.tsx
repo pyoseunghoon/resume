@@ -26,12 +26,9 @@ export default function SkillRow({
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
-          <h4 style={Style.gray}>{skill.category}</h4>
-        </Col>
-        <Col sm={12} md={9}>
+        <Col sm={12} md={6}>
           {/* {skill.items.map((item) => JSON.stringify(item, null, 2))} */}
-          {createCalculatedSkillItems(skill.items, isMobileScreen)}{' '}
+          {createCalculatedSkillItems(skill.items)}{' '}
           {/* isVerticalScreen을 인자로 전달 */}
         </Col>
       </Row>
@@ -39,13 +36,39 @@ export default function SkillRow({
   );
 }
 
-function createCalculatedSkillItems(items: ISkill.Item[], isVerticalScreen: boolean) {
+function createCalculatedSkillItems(items: ISkill.Item[]) {
+  return (
+    <Row className="mt-2">
+      <Col xs={12} className="d-flex flex-wrap align-items-center">
+        {items.map((skill, skillIndex) => (
+          <Badge
+            key={skillIndex.toString()}
+            color="primary" // 🔹 배지 색상
+            style={{
+              fontSize: '1rem', // 폰트 크기 조정
+              padding: '8px 12px', // 배지 내부 간격 조정
+              marginRight: '10px', // 아이템 간 간격
+              marginBottom: '5px', // 줄바꿈 시 여백 추가
+              borderRadius: '20px', // 둥근 모양
+              fontWeight: 'bold', // 글씨 강조
+            }}
+          >
+            {createBadge(skill.level)} {skill.title}
+          </Badge>
+        ))}
+      </Col>
+    </Row>
+  );
+}
+
+
+function createCalculatedSkillItems2(items: ISkill.Item[], isVerticalScreen: boolean) {
   const log = Util.debug('SkillRow:createCalculatedSkillItems');
 
   /**
    * @developer_commentary 단을 3단, 4단을 시도해봤지만 생각보다 이쁘게 나오지 않았고, 우선은 3단으로 한다. 만약 이쪽을 발전시킨다면 조금 더 이쁘고 능동적이게 데이터를 쪼갤 수 있는 방법을 찾으면 될 듯..
    */
-  const layer = 3;
+  const layer = 6;
 
   // const splitPoint = layer % 2 ? Math.ceil(items.length / layer) : Math.floor(items.length / layer);
   const splitPoint = Math.ceil(items.length / layer);
@@ -67,7 +90,6 @@ function createCalculatedSkillItems(items: ISkill.Item[], isVerticalScreen: bool
             {items.map((skill, skillIndex) => {
               return (
                 <li key={skillIndex.toString()}>
-                  {createBadge(skill.level)}
                   {skill.title}
                 </li>
               );

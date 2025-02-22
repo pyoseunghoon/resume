@@ -1,6 +1,6 @@
 {
   "name": "resume-nextjs",
-  "lastestUpdatedAt": "2024-11-11",
+  "lastestUpdatedAt": "2025-02-20",
   "version": "1.3.0",
   "description": "Static HTML based RESUME made with next.js",
   "main": "index.js",
@@ -18,19 +18,19 @@
     "lint": "eslint \"component/**/*\" \"pages/**/*\" \"payload/**/*\" \"*.ts\" --fix",
     "typedoc": "typedoc --excludeExternals"
   },
-  "homepage": "https://uyu423.github.io/resume-nextjs",
+  "homepage": "https://p37579898.github.io/resume",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uyu423/resume-nextjs.git"
+    "url": "git+https://github.com/pyoseunghoon/resume.git"
   },
   "keywords": [
     "resume",
     "next"
   ],
   "author": {
-    "name": "Yowu Yu",
-    "email": "me@yowu.dev",
-    "url": "https://yowu.dev"
+    "name": "Pyo",
+    "email": "p37579898@naver.com",
+    "url": "https://velog.io/@pyoseunghoon"
   },
   "contributors": [],
   "license": "MIT",
@@ -61,8 +61,8 @@
   "devDependencies": {
     "@types/luxon": "^1.27.1",
     "@types/next-seo": "^1.10.0",
-    "@types/node": "^13.13.52",
-    "@types/react": "^16.14.14",
+    "@types/node": "^22.13.4",
+    "@types/react": "^17.0.2",
     "@types/shelljs": "^0.8.9",
     "@types/styled-components": "^5.1.13",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
@@ -81,7 +81,7 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "typedoc": "~0.19.2",
-    "typescript": "^4.9.5"
+    "typescript": "^5.7.3"
   },
   "resolutions": {
     "**/minimist": "^1.2.3"

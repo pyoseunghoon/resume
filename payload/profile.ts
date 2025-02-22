@@ -1,44 +1,37 @@
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import { faPenNib, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
-import image from '../asset/sample_tux.png';
+import image from '../asset/profile_pyozzi.png';
 
 const profile: IProfile.Payload = {
   disable: false,
-
-  // image: 'https://resume.yowu.dev/static/image/profile_2019.png',
   image,
   name: {
-    title: 'Tux Linux Penguin',
-    small: '(Tux)',
+    title: '표승훈',
+    role: '(프론트엔드 웹 개발자)',
+    small: '가천대학교 컴퓨터공학과',
   },
   contact: [
     {
-      title: 'tux@linux.org',
-      link: 'mailto:tux@linux.org',
+      title: 'p37579898@naver.com',
+      link: 'mailto:p37579898@naver.com',
       icon: faEnvelope,
     },
     {
-      title: 'Please contact me by email',
+      title: '010-4118-0875',
       icon: faPhone,
       badge: true,
     },
     {
-      link: 'https://github.com/uyu423/resume-nextjs',
+      link: 'https://github.com/pyoseunghoon',
       icon: faGithub,
     },
     {
-      link: 'https://www.facebook.com/groups/ubuntu.ko',
-      icon: faFacebook,
+      link: 'https://velog.io/@pyoseunghoon/',
+      icon: faPenNib,
     },
   ],
-  notice: {
-    title:
-      "The content below is all fictitious and is just a sample from 'https://github.com/uyu423/resume-nextjs'.",
-    icon: faBell,
-  },
 };
 
 export default profile;
