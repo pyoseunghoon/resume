@@ -1,8 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css'; // ✅ FontAwesome 스타일 직접 로드
-
-config.autoAddCss = false; // ✅ Next.js가 자동으로 CSS를 추가하지 않도록 설정
 
 export default class ResumeDocument extends Document {
   render() {
