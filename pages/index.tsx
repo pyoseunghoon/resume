@@ -13,7 +13,10 @@ import { Project } from '../component/project';
 import { Skill } from '../component/skill';
 import { Style } from '../component/common/Style';
 import Payload from '../payload';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // ✅ FontAwesome 스타일 직접 로드
 
+config.autoAddCss = false; // Next.js가 자동으로 CSS를 추가하지 않도록 설정
 function Pyozzi() {
   return (
     <>
@@ -21,6 +24,12 @@ function Pyozzi() {
       <Head>
         <title>{Payload._global.headTitle}</title>
         {/* <link rel="shortcut icon" href={Payload._global.favicon} /> */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha384-lZN37f0Zt7aVwGzOa1TPvyzU3nMj98zr+ET2RXpD6Yj8r80uH6lSz0q0Udh2Lz"
+          crossOrigin="anonymous"
+        />
       </Head>
       <Container style={Style.global}>
         <Profile.Component payload={Payload.profile} />

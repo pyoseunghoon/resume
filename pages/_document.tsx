@@ -1,4 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // ✅ FontAwesome 스타일 직접 로드
+
+config.autoAddCss = false; // ✅ Next.js가 자동으로 CSS를 추가하지 않도록 설정
 
 export default class ResumeDocument extends Document {
   render() {
@@ -7,7 +11,6 @@ export default class ResumeDocument extends Document {
         <Head>
           {/* Step 5: Output the styles in the head  */}
           <meta charSet="utf-8" />
-          {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
           <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700|Parisienne&display=swap&subset=korean"
             rel="stylesheet"
@@ -20,10 +23,17 @@ export default class ResumeDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Parisienne&display=swap"
             rel="stylesheet"
           />
+          {/* ✅ FontAwesome 스타일을 HTML Head에서 미리 로드 */}
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha384-lZN37f0Zt7aVwGzOa1TPvyzU3nMj98zr+ET2RXpD6Yj8r80uH6lSz0q0Udh2Lz"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body>
-          <Main />
-          <NextScript />
+        <Main />
+        <NextScript />
         </body>
       </Html>
     );
