@@ -1,7 +1,7 @@
 import { faPenNib, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
-const image = '/asset/profile_pyozzi.png';
+const image = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/asset/profile_pyozzi.png`;
 
 const profile: IProfile.Payload = {
   disable: false,
