@@ -1,5 +1,5 @@
-import previewImage from '../asset/preview.jpg';
 import { IGlobal } from '../component/common/IGlobal';
+const previewImage = '/asset/preview.jpg';
 
 const title = 'Resume-표승훈';
 const description = '';

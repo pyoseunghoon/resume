@@ -37,7 +37,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 function createNameArea(name: Payload['name']) {
   return (
     <Row>
-      <Col className="text-center text-md-left">
+      <Col className="text-md-left" style={{ textAlign: 'left', display: 'flex', alignItems: 'center' }}>
         <h1 style={{ ...Style.blue, fontWeight: 'bold', display: 'inline' }}>{name.title}</h1>
         <span style={{ marginLeft: '8px' }}>{name.role}</span>
         <small style={{ color: 'rgba(0, 0, 0, 0.4)', marginLeft: '8px' }}>{name.small || ''}</small>
