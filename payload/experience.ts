@@ -31,7 +31,6 @@ const experience: IExperience.Payload = {
             'Loopback',
             'MySQL',
             'MongoDB',
-            'nginx',
             'Linux',
           ],
         },

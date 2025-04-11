@@ -48,12 +48,17 @@ const project: IProject.Payload = {
           weight: 'DEFAULT',
         },
         {
-          content: '관제사들의 업무 관리 시스템 설계 및 화면',
+          content: '관제사들의 업무 관리 시스템 설계 및 화면 개발',
           weight: 'DEFAULT',
         },
         {
           content:
             '위협 탐지를 위한 장비 등록 화면 개발 및 장비에서 제공하는 로그에 대한 내부 파싱규칙 설정 기능 개발',
+          weight: 'DEFAULT',
+        },
+        {
+          content:
+            '시스템 상태 모니터링 화면 개발 및 시스템 사용자 설정 화면 개발',
           weight: 'DEFAULT',
         },
         {
@@ -73,6 +78,9 @@ const project: IProject.Payload = {
         },
         {
           content: '고객사 Needs 에 맞는 REST API 개발',
+        },
+        {
+          content: '사내 제품과 연동하여 쓸 수 잇는 plugin 설정 화면 개발',
         },
       ],
     },
@@ -114,25 +122,23 @@ const project: IProject.Payload = {
           content: '사용자 정의 대시보드를 ag grid, echart, gridstack, EntityService를 통해 구현',
         },
         {
-          content: '고객사의 메인화면으로 사용되는 트래픽 대시보드 화면 개발',
-        },
-        {
-          content: 'Node 서버 성능 튜닝을 위해 Nginx 적용하여 로드밸런싱 적용',
+          content: '고객사의 메인화면으로 사용되는 트래픽 대시보드 화면 및 경보 알람 화면을 통해 위협 경보 발생시 화면에 알람을 띄워주는 화면 개발',
         },
         {
           content: '기존 통합검색 기능의 성능 저하로 인해 페이징 기능을 도입',
         },
         {
-          content: '트래픽 프로파일링 설정 기능 화면 개발',
+          content: '이벤트/트래픽 프로파일링을 통해 사용자의게 경보를 띄워주기 위한 설정 기능 화면 개발',
         },
         {
-          content: '외부 서비스를 플러그인 설정을 통해 내부 서비스에서 연동 할 수 있는 기능 개발',
+          content: '외부 서비스를 플러그인 설정을 통해 내부 서비스에서 연동 할 수 있는 설정 화면 개발',
         },
       ],
     },
     {
       title: '클라우드 기반 보안 서비스 개발',
-      startedAt: '2024-05',
+      startedAt: '2024-07',
+      endedAt: '2025-03',
       where: '(주)윈스',
       descriptions: [
         {
@@ -142,13 +148,30 @@ const project: IProject.Payload = {
           descriptions: [{ content: '국내 고객사뿐 아니라 일본 고객사 유치를 위한 초석 마련' }],
         },
         {
-          content: '클라우드 환경에 제품을 올리기 위한 웹 모듈화 작업',
+          content:
+            '보안 관제의 워크플로우 자동화 관리를 위한 FlowEngine 프로젝트 설계 및 개발',
           weight: 'SEMI_BOLD',
           descriptions: [
-            { content: '라이센스별 기능 분리를 위해 MSA 패턴 적용' },
-            { content: 'module-federation 기술을 사용하여 모듈화 진행' },
+            { content: 'Angular의 formly를 통해 Json 템플릿 기반으로 동적으로 UI 생성을 구축하여 반복되는 컴포넌트들에 대한 재사용성을 높혔습니다.' },
+            { content: '프로젝트내에 Apache Airflow를 엔진으로 채택해 웹에서 Airflow를 제어하여 워크플로우 관리가 되도록 아키텍쳐 설계 ' }
           ],
         },
+        {
+          content:
+            '제품내 통합검색 기능에서 사용자가 Drag & Drop 방식으로 필요한 조건을 만들어 검색을 하도록 기능 개선',
+        },
+        {
+          content:
+            '화면별 화면에서 제공하는 데이터에 대한 필터링 공용 컴포넌트 개발',
+        },
+        // {
+        //   content: '클라우드 환경에 제품을 올리기 위한 웹 모듈화 작업',
+        //   weight: 'SEMI_BOLD',
+        //   descriptions: [
+        //     { content: '라이센스별 기능 분리를 위해 MSA 패턴 적용' },
+        //     { content: 'module-federation 기술을 사용하여 모듈화 진행' },
+        //   ],
+        // },
       ],
     },
     {
@@ -176,7 +199,7 @@ const project: IProject.Payload = {
           content: 'Angular 및 Nodejs의 버전 업그레이드작업을 메인으로 맡아 진행',
         },
         {
-          content: 'SIEM 제품 버전별 유지보수 및 관리',
+          content: '현재 고객사에서 사용중인 SIEM 제품의 3가지 버전대를 동시에 유지 보수 및 관리',
         },
       ],
     },
