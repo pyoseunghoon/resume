@@ -1,5 +1,8 @@
-const introduce = {
-  title: 'INTRODUCE',
+import { IIntroduce } from '../component/introduce/IIntroduce';
+import packageJson from '../package.json';
+
+const introduce: IIntroduce.Payload = {
+  disable: false,
   contents: [
     '저는 Angular와 TypeScript를 주력으로 사용하는 5년 차 웹 프론트엔드 개발자입니다. 그동안 B2B 형태의 보안 웹 서비스 프로젝트에 참여하여 고객의 요구사항에 맞춘 맞춤형 솔루션을 제공해 왔습니다. JavaScript, TypeScript, Angular, Node.js, MySQL, Git, Linux 등 다양한 기술 스택을 활용하여 서비스를 설계하고 개발했으며, 코드의 가독성, 유지보수성, 그리고 사용자 경험(UX)을 항상 우선시하고 있습니다.',
 
@@ -9,6 +12,7 @@ const introduce = {
 
     '개발 블로그를 꾸준히 운영하면서 기술적 경험을 기록하고 공유하는 활동도 지속하고 있습니다. 앞으로도 지속적인 학습과 성장을 바탕으로 맡은 바 업무에 책임감 있게 임하겠습니다.',
   ],
+  latestUpdated: packageJson.lastestUpdatedAt || '2025-01-01',
 };
 
 export default introduce;
