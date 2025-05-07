@@ -10,14 +10,11 @@ const project: IProject.Payload = {
       where: '(주)윈스',
       descriptions: [
         {
-          content: '위협 정보 분석 화면 유지보수 및 상태 관리 개선',
-          weight: 'DEFAULT',
-          descriptions: [
-            {
-              content: 'ngrx 사용하여 Redux 패턴 적용',
-            },
-          ],
+          content: '위협 정보 분석 화면 유지보수',
         },
+        {
+          content: "NgRx 도입으로 상태 관리 복잡도 해소 및 비동기 데이터 관리 구조화, 디버깅 환경 개선"
+        }
       ],
     },
     {
@@ -163,13 +160,19 @@ const project: IProject.Payload = {
       where: '(주)윈스',
       descriptions: [
         {
-          content: '메모리 누수 개선 및 웹 초기 로딩 성능 향상',
+          "content": "메모리 누수 개선 및 성능 최적화 사례",
           weight: 'BOLD',
           descriptions: [
             {
-              content: '대규모 데이터 모니터링 시 브라우저 메모리 부족 현상 개선',
+              content: "AG Grid 렌더링 최적화로 24시간 기준 메모리 누수 70% 감소, 렌더링 성능 90% 최적화 및 API 호출 50% 절감",
+              weight: 'SEMI_BOLD',
+              href: 'https://velog.io/@pyoseunghoon/%EB%8B%A8%EC%88%9C-%EC%84%B1%EB%8A%A5-%EC%9D%B4%EC%8A%88%EC%9D%B8-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0-%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AC%B8%EC%A0%9C%EC%98%80%EB%8D%98-AG-Grid-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%AC%B8%EC%A0%9C'
             },
-            { content: 'Lazy Loading 적용 및 모듈 세분화로 초기 로딩 속도 50% 이상 개선' },
+            {
+              content: "Angular 번들 크기 75% 감소 및 초기 로딩 속도 단축으로 웹 성능 최적화",
+              weight: 'SEMI_BOLD',
+              href: 'https://velog.io/@pyoseunghoon/%EB%B3%B4%EC%95%88%EC%9E%A5%EB%B9%84%EC%97%90-%EB%A7%89%ED%9E%8C-Angular-%EC%95%B1-%EB%A1%9C%EB%94%A9-%EC%86%8D%EB%8F%84%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B3%B4%EB%8B%A4%EB%8B%88-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EA%B9%8C%EC%A7%80'
+            },
           ],
         },
         {
@@ -199,17 +202,26 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content:
-            'Angular의 빌트인 i18n 라이브러리를 활용하여 3가지 다국어 지원 구조 설계 및 개발',
+            '다국어 지원 웹 애플리케이션 아키텍처 설계 및 구현',
           weight: 'BOLD',
-          descriptions: [{ content: '국내 및 일본 고객사 유치를 위한 기반 마련' }],
+          href: 'https://velog.io/@pyoseunghoon/%EB%8B%A4%EA%B5%AD%EC%96%B4i18n-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%8F%84%EC%9E%85-%EB%B0%8F-%EA%B5%AD%EC%A0%9C%ED%99%94-%EA%B5%AC%EC%A1%B0-%EA%B0%9C%EC%84%A0',
+          descriptions: [
+            {
+              content: 'ngx-translate를 활용하여 3개 언어(한국어, 영어, 일본어)를 지원하는 글로벌화(i18n) 구조를 설계 및 구현',
+            },
+            {
+              content: '국내 및 일본 고객사 유치를 위한 기반 마련'
+            }
+          ],
         },
         {
-          content:
-            '보안 관제 워크플로우 자동화를 위한 FlowEngine 프로젝트 설계 및 개발',
+          content: '보안 관제 워크플로우 자동화 프로젝트 PL 및 웹 개발',
           weight: 'BOLD',
+          href: 'https://velog.io/@pyoseunghoon/%EC%9E%90%EB%8F%99%ED%99%94-Orchestration-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%94%A9',
           descriptions: [
-            { content: 'Angular의 Formly를 사용하여 JSON 템플릿 기반 동적 UI 생성 구조 구현, 컴포넌트 재사용성 향상' },
-            { content: 'Apache Airflow 엔진을 활용한 웹 기반 워크플로우 관리 아키텍처 설계' }
+            { content: "Angular Formly를 활용한 JSON 기반 동적 UI 설계 및 개발로 설정 UI 개발 시간을 평균 3일에서 1일 이하로 단축" },
+            { content: "Apache Airflow와 FastAPI를 연동한 웹 기반 워크플로우 관리 아키텍처 설계 및 구현" },
+            { content: "초기 일정 지연을 극복하기 위한 기능 우선순위 조정 및 협업 구조 개선" }
           ],
         },
         {

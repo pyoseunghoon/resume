@@ -11,7 +11,6 @@ const profile: IProfile.Payload = {
   name: {
     title: '표승훈',
     role: '(프론트엔드 웹 개발자)',
-    small: '가천대학교 컴퓨터공학과',
   },
   contact: [
     {

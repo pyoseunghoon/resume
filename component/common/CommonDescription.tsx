@@ -1,7 +1,8 @@
 import { CSSProperties, PropsWithChildren } from 'react';
 
-import { HrefTargetBlank } from '.';
 import { IRow } from './IRow';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons/faExternalLinkAlt";
 
 /** Description Recusion Generator */
 export function CommonDescription({
@@ -66,40 +67,83 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
   const component = (() => {
     if (href && postImage) {
       return (
-        <li style={getFontWeight(weight)}>
-          <HrefTargetBlank url={href} text={content} /> <img src={postImage} alt={postImage} />
+        <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
+          <span>{content}</span>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            aria-label="외부 링크"
+          >
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </a>
+          <img src={postImage} alt={postImage} style={{ marginLeft: '8px' }} />
         </li>
       );
     }
+
     if (href) {
       return (
-        <li style={getFontWeight(weight)}>
-          <HrefTargetBlank url={href} text={content} />
+        <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
+          <span>{content}</span>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            aria-label="외부 링크"
+          >
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </a>
         </li>
       );
     }
+
     if (postHref && postImage) {
       return (
-        <li style={getFontWeight(weight)}>
-          {content} <HrefTargetBlank url={postHref} text={postHref} />{' '}
-          <img src={postImage} alt={postImage} />
+        <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
+          <span>{content}</span>
+          <a
+            href={postHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            aria-label="외부 링크"
+          >
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </a>
+          <img src={postImage} alt={postImage} style={{ marginLeft: '8px' }} />
         </li>
       );
     }
+
     if (postHref) {
       return (
-        <li style={getFontWeight(weight)}>
-          {content} <HrefTargetBlank url={postHref} text={postHref} />
+        <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
+          <span>{content}</span>
+          <a
+            href={postHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            aria-label="외부 링크"
+          >
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </a>
         </li>
       );
     }
+
     if (postImage) {
       return (
-        <li style={getFontWeight(weight)}>
-          {content} <img src={postImage} alt={postImage} />
+        <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
+          <span>{content}</span>
+          <img src={postImage} alt={postImage} style={{ marginLeft: '8px' }} />
         </li>
       );
     }
+
     return (
       <>
         <meta name="format-detection" content="telephone=no" />

@@ -9,7 +9,8 @@ type TStyleKey =
   | 'profileImg'
   | 'footerCover'
   | 'footer'
-  | 'skillKeywordBadge';
+  | 'skillKeywordBadge'
+  | 'linkIcon';
 
 export const Style: Record<TStyleKey, CSSProperties> = {
   blue: {
@@ -51,5 +52,13 @@ export const Style: Record<TStyleKey, CSSProperties> = {
 
   skillKeywordBadge: {
     fontWeight: 400,
+  },
+
+  linkIcon: {
+    marginLeft: '12px',
+    color: '#0056b3',
+    fontSize: '14px',
+    cursor: 'pointer',
+    transition: 'color 0.3s',
   },
 };

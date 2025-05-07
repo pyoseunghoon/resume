@@ -4,10 +4,10 @@ const techStack: ISkill.Skill = {
   category: 'Languages',
   items: [
     {
-      title: 'Javascript',
+      title: 'JavaScript',
     },
     {
-      title: 'Typescript',
+      title: 'TypeScript',
     },
     {
       title: 'Angular',
