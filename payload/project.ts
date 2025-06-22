@@ -29,60 +29,129 @@ const project: IProject.Payload = {
     //   ],
     // },
     {
-      title: '보안 오케스트레이션 자동화 대응을 위한 워크플로우 기능 설계 및 웹 개발',
+      title:
+        '보안 오케스트레이션 자동화 대응을 위한 워크플로우 기능 설계 및 웹 FE 개발 (참여 인원: FE 1명 / BE 2명)',
       startedAt: '2025-04',
       endedAt: '2025-06',
       where: '(주)윈스테크넷',
       descriptions: [
         {
-          content: 'SOAR 제품의 flow 라이센스의 주요 기능인 워크플로우 프로젝트 리딩 (참여 인원: FE 1명 / BE 2명)',
-          weight: 'BOLD',
+          content: 'SOAR 제품의 flow 라이센스의 주요 기능인 워크플로우 프로젝트 리딩',
+          weight: 'BLACK',
           href: 'https://velog.io/@pyoseunghoon/%EC%9E%90%EB%8F%99%ED%99%94-Orchestration-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%94%A9',
           descriptions: [
-            { content: "고객들의 많은 요구 사항에 맞춰 빠르게 개발하기 위해 Angular Formly를 활용하여 JSON 기반 동적 UI 개발, UI 개발 시간을 평균 2일에서 0.5일 이하로 단축" },
-            { content: "워크플로우 오케스트레이션 프레임워크 Apache Airflow와 Prefect를 비교, 생태계가 크고 Role-Based Access Control 설정 및 상세 로그 수집에 유용한 Airflow 채택" },
-            { content: "보안 게이트 및 추후 플랫폼 교체의 자유도, 단방향 Flow를 고려하여 웹과 오케스트레이터 사이에 미들웨어 배치" },
-            { content: "초기 일정 지연을 극복하기 위한 기능 우선순위 조정 및 협업 방법 개선" }
+            {
+              content:
+                '【 문제상황 】 고객사별 다른 폼 구조 요구사항 (20개 고객사, 50여 개 폼), 초기 일정 지연, 한정된 개발완료 일정 및 인적 자원, 팀 내 온라인 협업 프로세스 미흡',
+            },
+            {
+              content: '【 해결방안 】 기술적 의사결정 및 프로세스 개선',
+              descriptions: [
+                {
+                  content:
+                    'Angular Formly를 활용한 JSON 스키마 기반 동적 렌더링 및 유효성 검사 자동화',
+                },
+                {
+                  content:
+                    'Apache Airflow 채택 (vs Prefect) - 생태계 규모, RBAC 설정, 상세 로그 수집 우수성',
+                },
+                {
+                  content:
+                    'Web server와 Airflow간 Middleware 배치로 보안 및 플랫폼 교체 자유도 확보',
+                },
+                { content: 'Notion, Figzam 협업도구 도입으로 오프라인 회의 효율성 개선' },
+              ],
+            },
+            { content: '【 성과 】 폼 개발 시간 80% 단축, 고객 요구사항 대응 시간 1주 → 1일 단축' },
           ],
         },
         {
           content: '워크플로우 설정 화면 웹 프론트엔드 파트 개발',
-          weight: 'BOLD',
+          weight: 'MEDIUM',
           descriptions: [
-            { content: "Cytoscape 오픈 소스 및 Angular CDK/Drag-Drop을 활용하여 복잡한 플로우 차트 설정 기능 개발" },
-            { content: "워크플로우의 Loop 설정 개발 – 하나의 워크플로우 안에서도 반복 가능한 형태의 데이터 주입 시 반복적으로 동작 가능" },
-            { content: "Angular Formly를 활용한 JSON 기반 동적 커스터마이징 플러그인 설정 화면 개발" },
-            { content: "Express 기반 API 레이어 ― 웹 서버에서 미들웨어 REST API 호출 및 설정값 CRUD 엔드포인트 구현" },
+            {
+              content:
+                'Cytoscape 오픈 소스 및 Angular CDK/Drag-Drop을 활용하여 복잡한 플로우 차트 설정 기능 개발',
+            },
+            {
+              content:
+                '워크플로우의 Loop 설정 개발 – 하나의 워크플로우 안에서도 반복 가능한 형태의 데이터 주입 시 반복적으로 동작 가능',
+            },
+            {
+              content:
+                'Angular Formly를 활용한 JSON 기반 동적 커스터마이징 플러그인 설정 화면 개발',
+            },
+            {
+              content:
+                'Express 기반 API 레이어 - 웹 서버에서 미들웨어 REST API 호출 및 설정값 CRUD 엔드포인트 구현',
+            },
           ],
         },
         {
           content: '워크플로우 감사로그 모니터링 웹 프론트엔드 파트 개발',
-          weight: 'BOLD',
+          weight: 'MEDIUM',
           descriptions: [
-            { content: "AG Grid 기반 감사 로그 모니터링 대시보드 구현 – 주기적 폴링으로 로그 데이터를 자동 갱신하고 즉시 조회·필터링 제공" },
-            { content: "실행 로그 대시보드에 ‘중지(Stop)’·‘재시도(Retry)’ 액션 버튼을 추가해, 운영자가 실시간으로 작업을 제어·복구할 수 있도록 개선" },
+            {
+              content:
+                'AG Grid 기반 감사 로그 모니터링 대시보드 구현 – 주기적 폴링으로 로그 데이터를 자동 갱신하고 즉시 조회·필터링 제공',
+            },
+            {
+              content:
+                "실행 로그 대시보드에 '중지(Stop)'·'재시도(Retry)' 액션 버튼을 추가해, 운영자가 실시간으로 작업을 제어·복구할 수 있도록 개선",
+            },
           ],
         },
       ],
     },
     {
-      title: 'SOAR, SIEM 솔루션의 다국어 적용',
+      title:
+        '다국어 적용 기반 SOAR/SIEM 솔루션 국제화(I18n) 고도화 및 개발 DX 개선 (참여 인원: FE/BE 1명)',
       startedAt: '2025-01',
       endedAt: '2025-03',
       where: '(주)윈스테크넷',
+      href: 'https://velog.io/@pyoseunghoon/%EB%8B%A4%EA%B5%AD%EC%96%B4i18n-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%8F%84%EC%9E%85-%EB%B0%8F-%EA%B5%AD%EC%A0%9C%ED%99%94-%EA%B5%AC%EC%A1%B0-%EA%B0%9C%EC%84%A0',
       descriptions: [
         {
           content:
-            '다국어 지원 웹 애플리케이션 아키텍처 설계 및 구현',
-          weight: 'BOLD',
-          href: 'https://velog.io/@pyoseunghoon/%EB%8B%A4%EA%B5%AD%EC%96%B4i18n-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%8F%84%EC%9E%85-%EB%B0%8F-%EA%B5%AD%EC%A0%9C%ED%99%94-%EA%B5%AC%EC%A1%B0-%EA%B0%9C%EC%84%A0',
+            '단일 언어(한국어)만 지원하던 기존 SOAR / SIEM 웹 솔루션의 다국어 지원 개선 리딩',
+          weight: 'BLACK',
           descriptions: [
             {
-              content: 'ngx-translate를 활용하여 3개 언어(한국어, 영어, 일본어)를 지원하는 글로벌화(i18n) 구조를 설계 및 구현',
+              content:
+                '【 문제상황 】 매 릴리즈마다 개발자가 git diff를 수동으로 확인하여 번역이 필요한 키 값을 Google Sheet에 복사해 마케팅팀과 번역 협업 수행 (시간 소모, 휴먼 에러 발생 우려)',
             },
             {
-              content: '국내 및 일본 고객사 유치를 위한 기반 마련'
-            }
+              content: '【 해결방안 】 기술적 자동화 및 협업 프로세스 효율화',
+              descriptions: [
+                {
+                  content:
+                    'git diff 기반 번역 키 자동 추출 및 Google Sheets API 연동을 통한 자동 시트 생성으로 마케팅팀과의 번역 협업 과정 자동화',
+                },
+              ],
+            },
+            {
+              content: '【 성과 】',
+              descriptions: [
+                { content: '번역 키 전달 프로세스 자동화로 번역 협업 소요시간 단축 (평균 1일 → 0.5일), 휴먼 에러 최소화' },
+                { content: '일본 고객사 유치를 위한 기반 마련' },
+              ],
+            },
+          ],
+        },
+        {
+          content:
+            '개발자 경험 향상을 위한 i18n 설계 구조 개선 및 CI 단계 다국어 Key 무결성 검사 도입',
+          weight: 'BOLD',
+          descriptions: [
+            {
+              content: '공통 메시지 구조 정의, 기능별 key 관리 체계 수립',
+            },
+            {
+              content: 'ngx-translate-extract를 통한 자동 키 수집으로 효율성 확대',
+            },
+            {
+              content: 'CI 파이프라인을 활용한 i18n key 무결성 검사 자동화 구현',
+            },
           ],
         },
       ],
@@ -94,18 +163,19 @@ const project: IProject.Payload = {
       where: '(주)윈스테크넷',
       descriptions: [
         {
-          "content": "메모리 누수 개선 및 성능 최적화 사례",
+          content: '메모리 누수 개선 및 성능 최적화 사례',
           weight: 'BOLD',
           descriptions: [
             {
-              content: "AG Grid 렌더링 최적화로 24시간 기준 메모리 누수 70% 감소, 렌더링 성능 90% 최적화 및 API 호출 50% 절감",
+              content:
+                'AG Grid 렌더링 최적화로 24시간 기준 메모리 누수 70% 감소, 렌더링 성능 90% 최적화 및 API 호출 50% 절감',
               weight: 'SEMI_BOLD',
-              href: 'https://velog.io/@pyoseunghoon/%EB%8B%A8%EC%88%9C-%EC%84%B1%EB%8A%A5-%EC%9D%B4%EC%8A%88%EC%9D%B8-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0-%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AC%B8%EC%A0%9C%EC%98%80%EB%8D%98-AG-Grid-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%AC%B8%EC%A0%9C'
+              href: 'https://velog.io/@pyoseunghoon/%EB%8B%A8%EC%88%9C-%EC%84%B1%EB%8A%A5-%EC%9D%B4%EC%8A%88%EC%9D%B8-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0-%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AC%B8%EC%A0%9C%EC%98%80%EB%8D%98-AG-Grid-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%AC%B8%EC%A0%9C',
             },
             {
-              content: "Angular 번들 크기 75% 감소 및 초기 로딩 속도 단축으로 웹 성능 최적화",
+              content: 'Angular 번들 크기 75% 감소 및 초기 로딩 속도 단축으로 웹 성능 최적화',
               weight: 'SEMI_BOLD',
-              href: 'https://velog.io/@pyoseunghoon/%EB%B3%B4%EC%95%88%EC%9E%A5%EB%B9%84%EC%97%90-%EB%A7%89%ED%9E%8C-Angular-%EC%95%B1-%EB%A1%9C%EB%94%A9-%EC%86%8D%EB%8F%84%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B3%B4%EB%8B%A4%EB%8B%88-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EA%B9%8C%EC%A7%80'
+              href: 'https://velog.io/@pyoseunghoon/%EB%B3%B4%EC%95%88%EC%9E%A5%EB%B9%84%EC%97%90-%EB%A7%89%ED%9E%8C-Angular-%EC%95%B1-%EB%A1%9C%EB%94%A9-%EC%86%8D%EB%8F%84%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B3%B4%EB%8B%A4%EB%8B%88-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EA%B9%8C%EC%A7%80',
             },
           ],
         },
@@ -118,11 +188,13 @@ const project: IProject.Payload = {
           content: '웹 클린 코드 작성을 위한 리팩토링 진행',
           weight: 'SEMI_BOLD',
           descriptions: [
-            { content: '모노레포 확장에 따른 상태 관리 재조정으로 DX 향상 및 유지보수 용이성 개선' },
+            {
+              content: '모노레포 확장에 따른 상태 관리 재조정으로 DX 향상 및 유지보수 용이성 개선',
+            },
           ],
         },
         {
-          content: 'Angular 및 Node.js 버전 업그레이드 진행'
+          content: 'Angular 및 Node.js 버전 업그레이드 진행',
         },
         {
           content: 'SIEM 제품 3가지 버전 동시 유지보수 관리',
@@ -164,11 +236,13 @@ const project: IProject.Payload = {
           descriptions: [{ content: '2024년 회사 내 서비스 부문 판매 최대 실적 달성' }],
         },
         {
-          content: '사용자 정의 대시보드를 ag-Grid, eCharts, Gridstack, EntityService를 활용하여 구현',
+          content:
+            '사용자 정의 대시보드를 ag-Grid, eCharts, Gridstack, EntityService를 활용하여 구현',
           weight: 'BOLD',
         },
         {
-          content: '고객사별 특화 위젯(디도스 모니터링, 위협 평판 관리, 검색바, 장비 상태 관리 등 총 10개) 개발',
+          content:
+            '고객사별 특화 위젯(디도스 모니터링, 위협 평판 관리, 검색바, 장비 상태 관리 등 총 10개) 개발',
           weight: 'SEMI_BOLD',
         },
         {
@@ -206,7 +280,7 @@ const project: IProject.Payload = {
           weight: 'SEMI_BOLD',
         },
         {
-          content: '고객사 요구사항에 맞춘 REST API 개발'
+          content: '고객사 요구사항에 맞춘 REST API 개발',
         },
         {
           content: '사내 제품과 연동 가능한 플러그인 설정 화면 개발',
@@ -233,8 +307,7 @@ const project: IProject.Payload = {
           weight: 'BOLD',
         },
         {
-          content:
-            '위협 탐지 장비 등록 화면 및 로그 파싱 규칙 설정 기능 개발',
+          content: '위협 탐지 장비 등록 화면 및 로그 파싱 규칙 설정 기능 개발',
           weight: 'MEDIUM',
         },
         {
@@ -246,7 +319,7 @@ const project: IProject.Payload = {
           weight: 'DEFAULT',
         },
         {
-          content: "멀티 테넌시 개념을 적용한 이용자 권한 설계 및 개발",
+          content: '멀티 테넌시 개념을 적용한 이용자 권한 설계 및 개발',
           weight: 'DEFAULT',
         },
         {
@@ -254,13 +327,11 @@ const project: IProject.Payload = {
           weight: 'DEFAULT',
         },
         {
-          content:
-            '시스템 상태 모니터링 및 관리자 사용자 관리 화면 개발',
+          content: '시스템 상태 모니터링 및 관리자 사용자 관리 화면 개발',
           weight: 'DEFAULT',
         },
         {
-          content:
-            '관리자 웹 감사 로그 모니터링 화면 개발',
+          content: '관리자 웹 감사 로그 모니터링 화면 개발',
           weight: 'DEFAULT',
         },
       ],
@@ -275,8 +346,9 @@ const project: IProject.Payload = {
           content: '위협 정보 분석 화면 유지보수',
         },
         {
-          content: "NgRx 도입으로 상태 관리 복잡도 해소 및 비동기 데이터 관리 구조화, 디버깅 환경 개선"
-        }
+          content:
+            'NgRx 도입으로 상태 관리 복잡도 해소 및 비동기 데이터 관리 구조화, 디버깅 환경 개선',
+        },
       ],
     },
   ],

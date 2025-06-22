@@ -18,6 +18,9 @@ export declare namespace IProject {
     /** ### 프로젝트 제목 */
     title: string;
 
+    /** ### 프로젝트 제목 링크 */
+    href?: string;
+
     /** ### 어디서 수행했는지 (or subtitle) */
     where: string;
 
