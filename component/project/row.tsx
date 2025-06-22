@@ -31,6 +31,8 @@ function serialize(payload: IProject.Item): IRow.Payload {
     return `${startedAt} ~`;
   })();
 
+  const subTitle = payload.teamSize ? `${payload.where} | ${payload.teamSize}` : payload.where;
+
   return {
     left: {
       title,
@@ -38,7 +40,7 @@ function serialize(payload: IProject.Item): IRow.Payload {
     right: {
       title: payload.title,
       titleHref: payload.href,
-      subTitle: payload.where,
+      subTitle,
       descriptions: payload.descriptions,
     },
   };

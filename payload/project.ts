@@ -29,11 +29,11 @@ const project: IProject.Payload = {
     //   ],
     // },
     {
-      title:
-        '보안 오케스트레이션 자동화 대응을 위한 워크플로우 기능 설계 및 웹 FE 개발 (참여 인원: FE 1명 / BE 2명)',
+      title: '보안 오케스트레이션 자동화 대응을 위한 워크플로우 기능 설계 및 웹 FE 개발',
       startedAt: '2025-04',
       endedAt: '2025-06',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: FE 1명, BE 2명',
       descriptions: [
         {
           content: 'SOAR 제품의 flow 라이센스의 주요 기능인 워크플로우 프로젝트 리딩',
@@ -104,11 +104,11 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title:
-        '다국어 적용 기반 SOAR/SIEM 솔루션 국제화(I18n) 고도화 및 개발 DX 개선 (참여 인원: FE/BE 1명)',
+      title: '다국어 적용 기반 SOAR/SIEM 솔루션 국제화(I18n) 고도화 및 개발 DX 개선',
       startedAt: '2025-01',
       endedAt: '2025-03',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: FE/BE 1명',
       href: 'https://velog.io/@pyoseunghoon/%EB%8B%A4%EA%B5%AD%EC%96%B4i18n-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%8F%84%EC%9E%85-%EB%B0%8F-%EA%B5%AD%EC%A0%9C%ED%99%94-%EA%B5%AC%EC%A1%B0-%EA%B0%9C%EC%84%A0',
       descriptions: [
         {
@@ -157,25 +157,63 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: '레거시 코드 개선 및 기존 비즈니스 로직 유지보수',
+      title: '기존 웹 솔루션의 성능 최적화 및 코드 리팩토링 주도 (Angular, Node.js)',
       startedAt: '2024-08',
       endedAt: '2024-12',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: FE/BE 1명',
       descriptions: [
         {
-          content: '메모리 누수 개선 및 성능 최적화 사례',
-          weight: 'BOLD',
+          content: 'AG Grid 기반 실시간 보안 관제 모니터링 시스템 성능 개선',
+          weight: 'BLACK',
+          href: 'https://velog.io/@pyoseunghoon/%EB%8B%A8%EC%88%9C-%EC%84%B1%EB%8A%A5-%EC%9D%B4%EC%8A%88%EC%9D%B8-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0-%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AC%B8%EC%A0%9C%EC%98%80%EB%8D%98-AG-Grid-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%AC%B8%EC%A0%9C',
           descriptions: [
             {
-              content:
-                'AG Grid 렌더링 최적화로 24시간 기준 메모리 누수 70% 감소, 렌더링 성능 90% 최적화 및 API 호출 50% 절감',
-              weight: 'SEMI_BOLD',
-              href: 'https://velog.io/@pyoseunghoon/%EB%8B%A8%EC%88%9C-%EC%84%B1%EB%8A%A5-%EC%9D%B4%EC%8A%88%EC%9D%B8-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0-%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AC%B8%EC%A0%9C%EC%98%80%EB%8D%98-AG-Grid-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%AC%B8%EC%A0%9C',
+              content: '【 문제상황 】 보안 관제 업무 특성상 초당 최대 8만개 데이터가 수집되어 5초 간격으로 실시간 업데이트되는 AG Grid 모니터링 화면을 수개월간 연속 운영. 실제 운영 서버에서 몇 주간 화면을 띄워놓은 상태에서 메모리 누수와 성능 저하로 모니터링 업무 지장 발생',
             },
             {
-              content: 'Angular 번들 크기 75% 감소 및 초기 로딩 속도 단축으로 웹 성능 최적화',
-              weight: 'SEMI_BOLD',
-              href: 'https://velog.io/@pyoseunghoon/%EB%B3%B4%EC%95%88%EC%9E%A5%EB%B9%84%EC%97%90-%EB%A7%89%ED%9E%8C-Angular-%EC%95%B1-%EB%A1%9C%EB%94%A9-%EC%86%8D%EB%8F%84%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B3%B4%EB%8B%A4%EB%8B%88-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EA%B9%8C%EC%A7%80',
+              content: '【 해결방안 】 AG Grid와 Angular의 lifecycle 불일치 문제 구조적 해결',
+              descriptions: [
+                {
+                  content: 'AG Grid 버전 일치 및 getRowId 설정으로 row identity 기준 고정, 커스텀 renderer refresh() 구현, Angular 16 signal과 TanStack Query 도입으로 불필요한 change detection 제거',
+                },
+              ],
+            },
+            {
+              content: '【 성과 】',
+              descriptions: [
+                {
+                  content: '24시간 기준 1000EPS 모니터링시 평균 메모리 누수 70% 감소, 렌더링 성능 90% 향상, API 호출 50% 절감',
+                  weight: 'SEMI_BOLD',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          content: 'Angular 애플리케이션 초기 로딩 성능 개선',
+          weight: 'BOLD',
+          href: 'https://velog.io/@pyoseunghoon/%EB%B3%B4%EC%95%88%EC%9E%A5%EB%B9%84%EC%97%90-%EB%A7%89%ED%9E%8C-Angular-%EC%95%B1-%EB%A1%9C%EB%94%A9-%EC%86%8D%EB%8F%84%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B3%B4%EB%8B%A4%EB%8B%88-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EA%B9%8C%EC%A7%80',
+          descriptions: [
+            {
+              content: '【 문제상황 】 보안장비 환경에서 Angular CSR 앱의 대용량 번들 파일(vendor.js 4MB, main.js 3.8MB)로 인한 초기 로딩 지연 및 WAF에서 ACK STORM으로 인식되어 웹 접속 차단 현상 발생',
+            },
+            {
+              content: '【 해결방안 】 번들 최적화 및 구조적 개선',
+              descriptions: [
+                {
+                  content: 'Tree-shaking을 위한 lodash → lodash-es 마이그레이션, 불필요한 라이브러리 제거, gzip 압축 적용, 컴포넌트 단위 lazy loading 도입 및 FSD 패턴 참고한 모듈 구조 개선',
+                },
+              ],
+            },
+            {
+              content: '【 성과 】',
+              descriptions: [
+                {
+                  content: 'Angular 번들 크기 75% 감소, 초기 로딩 속도 대폭 단축으로 사용자 경험 개선',
+                  weight: 'SEMI_BOLD',
+                },
+              ],
             },
           ],
         },
@@ -185,39 +223,52 @@ const project: IProject.Payload = {
           descriptions: [{ content: '관제 서비스 관련 버그 문의 80% 감소' }],
         },
         {
-          content: '웹 클린 코드 작성을 위한 리팩토링 진행',
-          weight: 'SEMI_BOLD',
-          descriptions: [
-            {
-              content: '모노레포 확장에 따른 상태 관리 재조정으로 DX 향상 및 유지보수 용이성 개선',
-            },
-          ],
-        },
-        {
           content: 'Angular 및 Node.js 버전 업그레이드 진행',
         },
         {
-          content: 'SIEM 제품 3가지 버전 동시 유지보수 관리',
+          content: 'SOAR 제품 3가지 버전 동시 유지보수 관리',
         },
       ],
     },
     {
-      title: '레거시 스타일 구조 개편 및 스타일 가이드 제공 기여',
-      startedAt: '2024-06',
+      title: '레거시 스타일 구조 개선 및 스타일 가이드 기여',
+      startedAt: '2024-09',
       endedAt: '2024-10',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: FE 1명, Publisher 1명, Designer 1명',
       descriptions: [
         {
-          content: '디자인팀 및 퍼블리셔와 협력하여 SIEM 웹 디자인 개선',
+          content: '사내 맞춤형 스타일 가이드 프로젝트 참여',
           weight: 'SEMI_BOLD',
           descriptions: [
             {
-              content:
-                '관제사의 야간 근무 환경을 고려한 화이트 테마 구현 (총 5가지 테마 중 주요 담당), 디자인팀과 협력하여 UI 완성',
+              content: '【 문제상황 】 프로젝트별 상이한 스타일 적용으로 인한 일관성 부족 및 신규 입사자들의 빠른 제품 적응 어려움',
             },
             {
+              content: '【 해결방안 】 재사용 가능한 컴포넌트 및 엘리먼트 기반 스타일 시스템 구축',
+              descriptions: [
+                {
+                  content: 'Material Design 기반 주요 UI 요소 정의, 웹 기반 스타일 가이드 제작',
+                },
+              ],
+            },
+            {
+              content: '【 성과 】',
+              descriptions: [
+                {
+                  content: '프로젝트 전반의 스타일 일관성 확보, 디자인-개발 협업 효율성 증대',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          content: '디자인팀 및 퍼블리셔와 협력하여 SOAR 웹 디자인 개선',
+          weight: 'MEDIUM',
+          descriptions: [
+            {
               content:
-                '사내 제품 맞춤형 스타일 가이드 작성 참여, 주요 UI 요소 정의 및 프로젝트 전반의 스타일 일관성 유지',
+                '관제사의 야간 근무 환경을 고려한 화이트 테마 포함 총 5가지 테마 개발, 고객별 맞춤 테마 제공으로 사용자 만족도 향상',
             },
           ],
         },
@@ -228,6 +279,7 @@ const project: IProject.Payload = {
       startedAt: '2023-02',
       endedAt: '2024-11',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: PL 1명, FE 2명, BE 3명, Publisher 1명, Designer 1명',
       descriptions: [
         {
           content:
