@@ -13,6 +13,7 @@ import { Project } from '../component/project';
 import { Skill } from '../component/skill';
 import { Style } from '../component/common/Style';
 import Payload from '../payload';
+import { Activity } from '../component/activity';
 
 function Pyozzi() {
   return (
@@ -20,12 +21,12 @@ function Pyozzi() {
       <NextSeo {...Payload._global.seo} />
       <Head>
         <title>{Payload._global.headTitle}</title>
-        {/* <link rel="shortcut icon" href={Payload._global.favicon} /> */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           integrity="sha384-lZN37f0Zt7aVwGzOa1TPvyzU3nMj98zr+ET2RXpD6Yj8r80uH6lSz0q0Udh2Lz"
           crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
         />
       </Head>
       <Container style={Style.global}>
@@ -37,8 +38,9 @@ function Pyozzi() {
         {/* <OpenSource.Component payload={Payload.openSource} /> */}
         {/* <Presentation.Component payload={Payload.presentation} /> */}
         {/* <Article.Component payload={Payload.article} /> */}
-        <Education.Component payload={Payload.education} />
+        <Activity.Component payload={Payload.activity} />
         <Etc.Component payload={Payload.etc} />
+        <Education.Component payload={Payload.education} />
         <Footer.Component payload={Payload.footer} />
       </Container>
     </>
