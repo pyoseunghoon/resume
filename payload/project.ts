@@ -29,7 +29,7 @@ const project: IProject.Payload = {
     //   ],
     // },
     {
-      title: '보안 오케스트레이션 자동화 대응을 위한 워크플로우 기능 설계 및 웹 FE 개발',
+      title: 'SOAR 솔루션의 보안 관제 워크플로우 자동화 기능 PL 및 웹 프론트엔드 개발',
       startedAt: '2025-04',
       endedAt: '2025-06',
       where: '(주)윈스테크넷',
@@ -37,7 +37,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: 'SOAR 제품의 flow 라이센스의 주요 기능인 워크플로우 프로젝트 리딩',
-          weight: 'BLACK',
+          weight: 'BOLD',
           href: 'https://velog.io/@pyoseunghoon/%EC%9E%90%EB%8F%99%ED%99%94-Orchestration-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%94%A9',
           descriptions: [
             {
@@ -104,7 +104,7 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: '다국어 적용 기반 SOAR/SIEM 솔루션 국제화(I18n) 고도화 및 개발 DX 개선',
+      title: '다국어 적용 기반 SOAR/SIEM 솔루션 국제화(I18n) 고도화 및 DX 개선',
       startedAt: '2025-01',
       endedAt: '2025-03',
       where: '(주)윈스테크넷',
@@ -113,8 +113,8 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content:
-            '단일 언어(한국어)만 지원하던 기존 SOAR / SIEM 웹 솔루션의 다국어 지원 개선 리딩',
-          weight: 'BLACK',
+            '단일 언어(한국어)만 지원하던 기존 SOAR / SIEM 웹 솔루션의 다국어 지원 설계 및 개발',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -125,7 +125,7 @@ const project: IProject.Payload = {
               descriptions: [
                 {
                   content:
-                    'git diff 기반 번역 키 자동 추출 및 Google Sheets API 연동을 통한 자동 시트 생성으로 마케팅팀과의 번역 협업 과정 자동화',
+                    'git diff 기반 번역 키 자동 추출 및 Google Sheets API 연동을 통한 자동 시트 생성, 번역 시트 자동 병합으로 마케팅팀과의 번역 협업 과정 자동화',
                 },
               ],
             },
@@ -140,8 +140,8 @@ const project: IProject.Payload = {
         },
         {
           content:
-            '개발자 경험 향상을 위한 i18n 설계 구조 개선 및 CI 단계 다국어 Key 무결성 검사 도입',
-          weight: 'BOLD',
+            '개발자 경험 향상을 위한 i18n 설계 구조 개선 및 Pre-commit, CI 단계 다국어 Key 무결성 검사 도입',
+          weight: 'MEDIUM',
           descriptions: [
             {
               content: '공통 메시지 구조 정의, 기능별 key 관리 체계 수립',
@@ -165,7 +165,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: 'AG Grid 기반 실시간 보안 관제 모니터링 시스템 성능 개선',
-          weight: 'BLACK',
+          weight: 'BOLD',
           href: 'https://velog.io/@pyoseunghoon/%EB%8B%A8%EC%88%9C-%EC%84%B1%EB%8A%A5-%EC%9D%B4%EC%8A%88%EC%9D%B8-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0-%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AC%B8%EC%A0%9C%EC%98%80%EB%8D%98-AG-Grid-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%AC%B8%EC%A0%9C',
           descriptions: [
             {
@@ -218,12 +218,44 @@ const project: IProject.Payload = {
           ],
         },
         {
+          content: 'Angular 버전 업그레이드 및 안정화',
+          weight: 'MEDIUM',
+          descriptions: [
+            {
+              content: '【 수행내용 】 단계별 Angular 마이그레이션 (13→18), Node.js 버전 관리 포함',
+            },
+            {
+              content: '【 주요 이슈 해결 】',
+              descriptions: [
+                {
+                  content: '의존성 트리 정상화: legacy-peer-deps 제거 및 불필요 라이브러리 정리',
+                },
+                {
+                  content: 'View Engine → Ivy 전환 대응: 종속 라이브러리 Ivy 호환성 확보',
+                },
+                {
+                  content: 'RouterEvent 타입 명시로 라우팅 에러 해결',
+                },
+                {
+                  content: 'AgGridModule.withComponents 제거하여 Grid 빌드 오류 수정',
+                },
+                {
+                  content: 'Webpack 5 CSS 경로 참조 이슈(swiper) 해결 및 uuid 라이브러리 버전 명시',
+                },
+                {
+                  content: 'DOM 렌더링 최적화 및 zone-less 환경 전환을 위해 Signal 기반 리팩토링 적용'
+                }
+              ],
+            },
+            {
+              content: '【 향후 대응방안 마련 】 보안 취약점, 성능 개선, 심각한 결함 발생 시에만 업데이트 진행 원칙 수립 및 테스트 프로세스 필요성 확인',
+            },
+          ],
+        },
+        {
           content: '사용자, 장비 등록 등 중요 백엔드 로직에 MySQL 트랜잭션 적용',
           weight: 'MEDIUM',
           descriptions: [{ content: '관제 서비스 관련 버그 문의 80% 감소' }],
-        },
-        {
-          content: 'Angular 버전 업그레이드 및 마이그레이션 진행',
         },
         // {
         //   content: 'SOAR 제품 3가지 버전 동시 유지보수 관리',
@@ -231,7 +263,7 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: '레거시 스타일 구조 개선 및 스타일 가이드 기여',
+      title: '제품의 스타일 가이드 제공 및 SOAR 웹 테마 5종 개발',
       startedAt: '2024-09',
       endedAt: '2024-10',
       where: '(주)윈스테크넷',
@@ -275,7 +307,7 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: '자사 SOAR 보안 관제 솔루션 서비스 개발',
+      title: '보안 오케스트레이션, 자동화 및 대응을 할 수 있는 솔루션인 SOAR(Security Orchestration, Automation and Response)의 웹 프론트엔드 개발 및 Express api 개발',
       startedAt: '2023-02',
       endedAt: '2024-11',
       where: '(주)윈스테크넷',
@@ -284,7 +316,7 @@ const project: IProject.Payload = {
         {
           content:
             '회사내 관제팀, 고객사의 요구사항에 맞는 비즈니스 로직 구현을 통해 자동화 관제 서비스 웹 프론트엔드 개발',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
           descriptions: [
             { content: '매출: 서비스 부문 전년 대비 500% 달성 (1억 → 5억)' },
             { content: '고객: KT,LG U+ 주요 통신사 계약' }
@@ -397,10 +429,11 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: 'REST API 서버 구축 및 API 개발',
+      title: '외부 고객사 및 분석가에게 제공하는 Open API 서버 개발 및 SIEM 서비스의 데이터를 제공하는 REST API 개발',
       startedAt: '2022-05',
       endedAt: '2022-07',
       where: '(주)윈스테크넷',
+      teamSize: '1인 프로젝트',
       descriptions: [
         {
           content: '서비스에 연동 가능한 Open API 서버를 Loopback3 프레임워크를 사용하여 개발',
@@ -415,66 +448,145 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: 'SIEM(보안 정보 및 이벤트 관리) 보안 관제 솔루션 웹 개발',
+      title: '보안 분석가분들이 조직의 IT 환경에서 발생하는 다양한 보안 로그 및 이벤트를 수집,분석하여 잠재적인 보안 위협을 탐지하고 대응할 수 있는 솔루션인 SIEM(Security information and event management)의 웹 프론트엔드 개발 및 Express api 개발',
       startedAt: '2021-05',
       endedAt: '2023-01',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: PL 1명, FE 3명, BE 5명, Designer 1명',
       descriptions: [
         {
           content:
             '보안 관제사의 관점에서 UX/UI 개선 및 신규 니즈(Needs)에 맞춘 비즈니스 로직 구현을 통한 사내 AI 보안 관제 솔루션 개발',
-          weight: 'BOLD',
+          weight: 'SEMI_BOLD',
           descriptions: [
             { content: '2025년 02월 기준 기존 사내 보안 관제 솔루션 80% 대체' },
             { content: '2025년 02월 기준 15개 기업에 서비스 제공 중' },
           ],
         },
         {
+          content: 'SIEM 품질 테스트 자동화 시스템 구축 및 E2E 테스트 수행',
+          weight: 'SEMI_BOLD',
+          descriptions: [
+            {
+              content: '프로파일, 상관분석, 검색, 보고서 등 주요 기능에 대한 Playwright 기반 E2E 테스트 시나리오 작성 및 검증',
+              weight: 'SEMI_BOLD'
+            },
+            {
+              content: '실시간 DB 상태 변경으로 테스트 신뢰도가 낮아지는 문제를 해결하기 위해 MSW(Mock Service Worker)를 도입하여, 테스트 실행 시 API 응답을 가상화하고 정제된 mock 데이터를 반환하는 방식으로 안정적인 테스트 환경 구성',
+              weight: 'SEMI_BOLD'
+            }
+          ]
+        },
+        {
+          content: "내부 자산정보 연동 및 Lookup 기능 개발",
+          weight: 'SEMI_BOLD',
+          descriptions: [
+            {
+              content: "【 기능 구현 】 CSV, JSON, API 형태의 내부 자산정보를 SIEM 솔루션에 연동하여 분석 가능한 'Lookup' 화면 개발",
+              descriptions: [
+                {
+                  content: "자동/수동 Import 기능 및 자산정보 스키마 설정 기능 구현",
+                },
+                {
+                  content: "통합검색 화면에서 내부 데이터와 외부 데이터 Join 조회(상관분석) 지원",
+                },
+                {
+                  content: "Material Stepper 및 Prefix Directive 활용해 파일 경로 타입 자동화",
+                }
+              ]
+            },
+            {
+              content: "【 주요 이슈 해결 】 파일 업로드 취소 시 Angular 이벤트 버블링으로 자식 컴포넌트가 제거되는 문제 해결",
+              descriptions: [
+                {
+                  content: "Angular Output 이벤트명이 DOM 이벤트명과 충돌할 때 발생하는 이벤트 버블링 현상 인지 및 stopPropagation 적용하여 해결",
+                }
+              ]
+            }
+          ]
+        },
+        {
+          content: '장비 연동 설정 화면의 복잡한 상태관리를 EntityCollectionService + Facade 패턴으로 구조화',
+          weight: 'MEDIUM',
+          descriptions: [
+            {
+              content: '30개 이상의 컴포넌트가 각기 다른 설정값을 관리하는 화면에서 중앙 집중식 상태관리를 적용하고, Facade 패턴으로 자식 컴포넌트 인터페이스를 단일화하여 복잡도 해소'
+            }
+          ]
+        },
+        {
+          content: '로그 미수신 알람 설정 화면 개발',
+          descriptions: [
+            {
+              content: '조건 기반 알람 발생 및 해제 로직 구현'
+            }
+          ]
+        },
+        // TODO
+        {
           content: '자체 쿼리 문법을 활용한 통합 검색 화면 개발',
-          weight: 'BOLD',
-        },
-        {
-          content: '위협 탐지 장비 등록 화면 및 로그 파싱 규칙 설정 기능 개발',
-          weight: 'BOLD',
-        },
-        {
-          content: 'Playwright를 활용한 웹 클라이언트 테스트 코드 작성',
-          weight: 'BOLD',
         },
         {
           content: '회원가입 및 로그인 화면 개발',
-          weight: 'BOLD',
         },
         {
           content: '멀티 테넌시 개념을 적용한 이용자 권한 설계 및 개발', // 계층형 권한 구조 설계, 확장 가능한 사용자 관리 아키텍처
-          weight: 'BOLD',
         },
         {
-          content: '관제사 업무 관리 시스템 설계 및 화면 개발',
-          weight: 'DEFAULT',
-        },
-        {
-          content: '시스템 상태 모니터링 및 관리자 사용자 관리 화면 개발',
-          weight: 'DEFAULT',
-        },
-        {
-          content: '관리자 웹 감사 로그 모니터링 화면 개발',
-          weight: 'DEFAULT',
-        },
+          content: '위협 탐지 장비 등록부터 관제 업무, 시스템 상태 및 감사 로그 모니터링까지 보안 운영 관리 기능 화면 개발'
+        }
+        // {
+        //   content: '위협 탐지 장비 등록 화면 및 로그 파싱 규칙 설정 기능 개발',
+        //   weight: 'BOLD',
+        // },
+        // {
+        //   content: '관제사 업무 관리 시스템 설계 및 화면 개발',
+        // },
+        // {
+        //   content: '시스템 상태 모니터링 및 관리자 사용자 관리 화면 개발',
+        // },
+        // {
+        //   content: '관리자 웹 감사 로그 모니터링 화면 개발',
+        // },
       ],
     },
     {
-      title: 'CTI(사이버 위협 인텔리전스) 자사 서비스 웹 클라이언트/벡엔드 유지보수',
+      title: '수집된 위협 정보를 분석하여 누가, 어떤 방식으로, 어떤 목적으로 공격하는지 인텔리전스를 제공하는 CTI 솔루션의 웹 프론트엔드 및 벡엔드 유지보수',
       startedAt: '2021-03',
       endedAt: '2021-06',
       where: '(주)윈스테크넷',
+      teamSize: '참여 인원: FE 1명, BE 1명',
       descriptions: [
         {
-          content: '위협 정보 분석 화면 유지보수',
+          content: '폐쇄망 환경 npm sqlite3 설치 이슈 해결',
+          weight: 'MEDIUM',
+          descriptions: [
+            {
+              content: '【 문제상황 】 폐쇄망 환경에서 sqlite3 Native 패키지 설치 실패 (node-gyp 컴파일 및 바이너리 이슈)',
+            },
+            {
+              content: '【 대응방안 】 sqlite3 커스텀 패키지(.tgz) 제작 및 관리',
+              descriptions: [
+                {
+                  content: 'CentOS 가상환경에서 node-pre-gyp로 sqlite3 바이너리(.node) 포함된 커스텀 tgz 파일 생성',
+                },
+                {
+                  content: '생성된 tgz를 내부 npm 레포지토리에 배포하여 오프라인 설치 지원',
+                }
+              ]
+            },
+            {
+              content: '【 성과 】 폐쇄망 환경에서 안정적인 sqlite3 패키지 설치를 구현하고, node_modules를 Git에서 분리하여 관리 효율성 향상'
+            }
+          ]
         },
         {
-          content:
-            'NgRx 도입으로 상태 관리 복잡도 해소 및 비동기 데이터 관리 구조화, 디버깅 환경 개선',
+          content: '위협 정보 분석 화면 유지보수 및 NgRx 도입',
+          descriptions: [
+            {
+              content: 'NgRx를 도입하여 상태 관리 복잡도를 해소하고 비동기 데이터 관리 구조화 및 디버깅 환경 개선',
+            }
+          ]
         },
       ],
     },
