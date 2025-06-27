@@ -12,7 +12,7 @@ export declare namespace IRow {
   export interface Right {
     title?: string;
     titleHref?: string;
-    subTitle?: string;
+    subTitle?: string | JSX.Element;
     descriptions?: Description[];
   }
 
@@ -28,6 +28,14 @@ export declare namespace IRow {
   export interface Description {
     /** ### 설명 본문 */
     content: string;
+
+    /**
+     * ### 인라인 스타일 정의
+     * 
+     * @description **text** 형태로 텍스트를 감싸면 해당 부분에 강조 스타일이 적용됩니다.
+     * @example "이것은 **강조된 텍스트**입니다"
+     */
+    useInlineStyles?: boolean;
 
     /**
      * ### 폰트 두께 설정이 필요할 경우

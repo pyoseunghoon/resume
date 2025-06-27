@@ -24,6 +24,9 @@ export declare namespace IProject {
     /** ### 어디서 수행했는지 (or subtitle) */
     where: string;
 
+    /** ### 팀명 */
+    team?: string;
+
     /** ### 참여 인원 정보 */
     teamSize?: string;
 

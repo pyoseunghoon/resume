@@ -31,7 +31,24 @@ function serialize(payload: IProject.Item): IRow.Payload {
     return `${startedAt} ~`;
   })();
 
-  const subTitle = payload.teamSize ? `${payload.where} | ${payload.teamSize}` : payload.where;
+  const subTitle = (() => {
+    if (payload.team) {
+      return (
+        <span>
+          {payload.where}{' '}
+          <span style={{ fontSize: '90%', fontStyle: 'italic', color: '#6c757d' }}>
+            {payload.team}
+          </span>
+          {payload.teamSize && (
+            <div style={{ fontSize: '85%', marginTop: '4px', color: '#868e96' }}>
+              {payload.teamSize}
+            </div>
+          )}
+        </span>
+      );
+    }
+    return payload.teamSize ? `${payload.where} | ${payload.teamSize}` : payload.where;
+  })();
 
   return {
     left: {

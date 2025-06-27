@@ -4,6 +4,27 @@ import { IRow } from './IRow';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons/faExternalLinkAlt";
 
+// 인라인 스타일 파싱 함수
+function parseInlineStyles(text: string): JSX.Element {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          const boldText = part.slice(2, -2);
+          return (
+            <span key={index} style={{ fontWeight: 600 }}>
+              {boldText}
+            </span>
+          );
+        }
+        return <span key={index}>{part}</span>;
+      })}
+    </>
+  );
+}
+
 /** Description Recusion Generator */
 export function CommonDescription({
   descriptions,
@@ -62,13 +83,20 @@ function DescriptionRecursion({
 }
 
 function Description({ description }: PropsWithChildren<{ description: IRow.Description }>) {
-  const { content, href, postImage, postHref, weight } = description;
+  const { content, href, postImage, postHref, weight, useInlineStyles } = description;
+
+  const getContentElement = () => {
+    if (useInlineStyles) {
+      return parseInlineStyles(content);
+    }
+    return content;
+  };
 
   const component = (() => {
     if (href && postImage) {
       return (
         <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
-          <span>{content}</span>
+          <span>{getContentElement()}</span>
           <a
             href={href}
             target="_blank"
@@ -86,7 +114,7 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     if (href) {
       return (
         <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
-          <span>{content}</span>
+          <span>{getContentElement()}</span>
           <a
             href={href}
             target="_blank"
@@ -103,7 +131,7 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     if (postHref && postImage) {
       return (
         <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
-          <span>{content}</span>
+          <span>{getContentElement()}</span>
           <a
             href={postHref}
             target="_blank"
@@ -121,7 +149,7 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     if (postHref) {
       return (
         <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
-          <span>{content}</span>
+          <span>{getContentElement()}</span>
           <a
             href={postHref}
             target="_blank"
@@ -138,7 +166,7 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     if (postImage) {
       return (
         <li style={getFontWeight(weight)} className="relative flex items-center space-x-2">
-          <span>{content}</span>
+          <span>{getContentElement()}</span>
           <img src={postImage} alt={postImage} style={{ marginLeft: '8px' }} />
         </li>
       );
@@ -147,7 +175,7 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     return (
       <>
         <meta name="format-detection" content="telephone=no" />
-        <li style={getFontWeight(weight)}>{content}</li>
+        <li style={getFontWeight(weight)}>{getContentElement()}</li>
       </>
     );
   })();

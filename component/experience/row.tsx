@@ -64,7 +64,20 @@ export default function ExperienceRow({
         </Col>
         <Col sm={12} md={9}>
           <h4 style={{ display: 'inline-flex', alignItems: 'center' }}>
-            {item.title}{' '}
+            {item.title}
+            {item.team && (
+              <span style={{ 
+                fontSize: '70%', 
+                marginLeft: '12px', 
+                marginRight: '16px',
+                fontWeight: 'normal',
+                fontStyle: 'italic',
+                color: '#6c757d'
+              }}>
+                {item.team}
+              </span>
+            )}
+            {' '}
             <span style={{ fontSize: '65%', display: 'inline-flex', alignItems: 'center' }}>
               {isCurrentlyEmployed && (
                 <Badge color="primary" className="ml-1">
