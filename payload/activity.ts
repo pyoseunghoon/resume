@@ -21,7 +21,7 @@ const activity: IActivity.Payload = {
         },
       ],
       startedAt: '2025-03',
-      endedAt: '2024-05',
+      endedAt: '2025-05',
     },
   ],
 };
