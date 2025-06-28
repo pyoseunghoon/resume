@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PropsWithChildren } from 'react';
 import { Row, Col } from 'reactstrap';
 import { IProfile } from './IProfile';
@@ -18,13 +17,27 @@ const ContactBadge = styled.span`
   line-height: 1.2; /* ✅ 텍스트 높이 조정 */
 `;
 
+// 아이콘 타입에 따른 Unicode 심볼 매핑
+function getIconSymbol(iconName: string): string {
+  const iconMap: Record<string, string> = {
+    'envelope': '📧',
+    'phone': '📞', 
+    'github': '🐙',
+    'pen-nib': '✍️'
+  };
+  
+  return iconMap[iconName] || '•';
+}
+
 export default function ProfileContact({
                                          payload,
                                        }: PropsWithChildren<{ payload: IProfile.Contact }>) {
   return (
     <Row className="pb-2">
       <Col xs={1} className="text-right">
-        <FontAwesomeIcon icon={payload.icon} />
+        <span style={{ fontSize: '16px' }}>
+          {getIconSymbol(payload.icon.iconName as string)}
+        </span>
       </Col>
       <Col xs="auto">{createLink(payload)}</Col>
     </Row>

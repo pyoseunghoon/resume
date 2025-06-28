@@ -1,8 +1,6 @@
 import { CSSProperties, PropsWithChildren } from 'react';
 
 import { IRow } from './IRow';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons/faExternalLinkAlt";
 
 // 인라인 스타일 파싱 함수
 function parseInlineStyles(text: string): JSX.Element {
@@ -101,10 +99,16 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            style={{ 
+              marginLeft: '8px', 
+              color: '#0056b3', 
+              cursor: 'pointer',
+              textDecoration: 'none',
+              fontSize: '0.9em'
+            }}
             aria-label="외부 링크"
           >
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            ↗
           </a>
           <img src={postImage} alt={postImage} style={{ marginLeft: '8px' }} />
         </li>
@@ -119,10 +123,16 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            style={{ 
+              marginLeft: '8px', 
+              color: '#0056b3', 
+              cursor: 'pointer',
+              textDecoration: 'none',
+              fontSize: '0.9em'
+            }}
             aria-label="외부 링크"
           >
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            ↗
           </a>
         </li>
       );
@@ -136,10 +146,16 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
             href={postHref}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            style={{ 
+              marginLeft: '8px', 
+              color: '#0056b3', 
+              cursor: 'pointer',
+              textDecoration: 'none',
+              fontSize: '0.9em'
+            }}
             aria-label="외부 링크"
           >
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            ↗
           </a>
           <img src={postImage} alt={postImage} style={{ marginLeft: '8px' }} />
         </li>
@@ -154,10 +170,16 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
             href={postHref}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginLeft: '8px', color: '#0056b3', cursor: 'pointer' }}
+            style={{ 
+              marginLeft: '8px', 
+              color: '#0056b3', 
+              cursor: 'pointer',
+              textDecoration: 'none',
+              fontSize: '0.9em'
+            }}
             aria-label="외부 링크"
           >
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            ↗
           </a>
         </li>
       );

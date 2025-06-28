@@ -1,9 +1,6 @@
-import { faPenNib, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '/resume';
 const image = `${BASE_PATH}/asset/profile_pyozzi.png`;
-
 
 const profile: IProfile.Payload = {
   disable: false,
@@ -16,20 +13,20 @@ const profile: IProfile.Payload = {
     {
       title: 'p37579898@naver.com',
       link: 'mailto:p37579898@naver.com',
-      icon: faEnvelope,
+      icon: { iconName: 'envelope' } as any,
     },
     {
       title: '010-4118-0875',
-      icon: faPhone,
+      icon: { iconName: 'phone' } as any,
       badge: true,
     },
     {
       link: 'https://github.com/pyoseunghoon',
-      icon: faGithub,
+      icon: { iconName: 'github' } as any,
     },
     {
       link: 'https://velog.io/@pyoseunghoon/',
-      icon: faPenNib,
+      icon: { iconName: 'pen-nib' } as any,
     },
   ],
 };
