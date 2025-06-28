@@ -12,23 +12,22 @@ const project: IProject.Payload = {
       team: '서비스개발팀',
       descriptions: [
         {
-          content: '라이선스별 기능 분리 및 클라우드 환경에서의 유연한 배포를 목표로 MSA 패턴 도입 추진',
+          content: '라이선스별 기능 분리 및 클라우드 환경에서의 유연한 배포를 목표로 마이크로 프론트엔드 아키텍쳐 도입 추진',
           weight: 'SEMI_BOLD',
           descriptions: [
             {
               content:
-                '구조화, 모듈 분리 및 배포에 유리한 스캐폴드 환경을 조성하기 위해 **NX** 도입',
+                '**NX** 도입을 통해 기능 단위 모듈화를 진행하고, 라이브러리 기반 스캐폴딩 및 배포 최적화 구조 설계',
                 useInlineStyles: true
             },
             {
               content:
-                '**FSD 아키텍처**의 트레이드 오프 파악 후 화면 기준으로 설계된 기존 폴더 구조를 리팩토링 진행 중',
+                '**FSD 아키텍처**의 트레이드 오프 파악 후 페이지 기준으로 설계된 기존 폴더 구조를 리팩토링 진행 중',
                 useInlineStyles: true
             },
             {
-              content:
-                '**Module Federation** 기술을 활용하여 고객마다 기능 조합을 다르게 제공 예정', // 런타임에 접근 가능한 기능 개별 빌드하여, 동적으로 기능을 붙이도록 하여
-                useInlineStyles: true
+              content: '**Module Federation**을 활용하여 기능별 개별 빌드 및 런타임 조합 구조를 설계하고, 고객사별 기능 조합에 맞춰 동적으로 제공하는 배포 방식을 준비',
+              useInlineStyles: true
             }
           ],
         },
